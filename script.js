@@ -9,8 +9,8 @@ const mySwiper = document.querySelector('.mySwiper');
 let topTenMangaApi = 'https://api.jikan.moe/v4/top/manga';
 let randomMagnaApi = 'https://api.jikan.moe/v4/random/manga';
 
-function fetchDate(el , apiType ,classDeleted){
-    fetch(apiType)
+async function fetchDate(el , apiType ,classDeleted){
+    await fetch(apiType)
     .then(res => res.json())
     .then(res => createRandomElementCard(res , el , classDeleted))
 }
